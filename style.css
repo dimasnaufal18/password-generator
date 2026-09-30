@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #FF5733;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
+}
+
+.result-card {
+    background: rgba(255, 87, 51, 0.05);
+    border-color: rgba(255, 87, 51, 0.3);
+}
+
+/* Password Display */
+.password-display {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.password-display input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+}
+
+.password-display input::placeholder {
+    color: #666;
+}
+
+.password-display button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #FF5733;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.password-display button:hover {
+    background: #e64a2e;
+    transform: scale(1.05);
+}
+
+/* Strength Meter */
+.strength-meter {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.strength-text {
+    font-size: 0.85rem;
+    color: #aaa;
+    text-align: center;
+}
+
+/* Settings */
+.setting {
+    margin-bottom: 20px;
+}
+
+.setting label {
+    display: block;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.setting input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.setting input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #FF5733;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.setting input[type="range"]::-webkit-slider-thumb:hover {
+    background: #e64a2e;
+    transform: scale(1.2);
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.checkbox-item:hover {
+    background: rgba(255, 87, 51, 0.1);
+    border-color: #FF5733;
+}
+
+.checkbox-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: #FF5733;
+    cursor: pointer;
+}
+
+.checkbox-item span {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #FF5733;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #e64a2e;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #fff;
+    margin-top: 15px;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* History */
+#history-card h3 {
+    color: #FF5733;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+#history-list {
+    list-style: none;
+}
+
+#history-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .password-display input {
+        font-size: 0.95rem;
+    }
+}

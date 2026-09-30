@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🔐 Password Generator</h1>
+            <p>Bikin password kuat & acak dalam hitungan detik.</p>
+        </header>
+
+        <!-- Hasil Password -->
+        <div class="card result-card">
+            <div class="password-display">
+                <input type="text" id="password-output" readonly placeholder="Klik Generate untuk mulai">
+                <button id="copy-btn" title="Copy password">📋</button>
+            </div>
+            <div class="strength-meter">
+                <div class="strength-bar" id="strength-bar"></div>
+            </div>
+            <p class="strength-text" id="strength-text">Menunggu generate...</p>
+        </div>
+
+        <!-- Settings -->
+        <div class="card">
+            <div class="setting">
+                <label for="length">Panjang Password: <span id="length-value">16</span></label>
+                <input type="range" id="length" min="4" max="64" value="16">
+            </div>
+
+            <div class="checkbox-group">
+                <label class="checkbox-item">
+                    <input type="checkbox" id="uppercase" checked>
+                    <span>Huruf Besar (A-Z)</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" id="lowercase" checked>
+                    <span>Huruf Kecil (a-z)</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" id="numbers" checked>
+                    <span>Angka (0-9)</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox" id="symbols" checked>
+                    <span>Simbol (!@#$%^&*)</span>
+                </label>
+            </div>
+
+            <!-- Tombol -->
+            <div class="buttons">
+                <button id="generate-btn" class="btn btn-primary">✨ Generate</button>
+                <button id="reset-btn" class="btn btn-secondary">🔄 Reset</button>
+            </div>
+        </div>
+
+        <!-- Riwayat -->
+        <div class="card" id="history-card" style="display: none;">
+            <h3>📜 Riwayat (5 Terakhir)</h3>
+            <ul id="history-list"></ul>
+            <button id="clear-history-btn" class="btn btn-danger btn-sm">🗑️ Hapus Riwayat</button>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Mhd Dimas Naufal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
