@@ -138,6 +138,8 @@ https://dimasnaufal18.github.io/password-generator/
 
 > Pastikan URL tersebut sudah aktif sebelum digunakan sebagai link resmi project.
 
+https://password-generator-web-chi.vercel.app
+
 ## Troubleshooting
 
 ### Password tidak dapat dibuat
